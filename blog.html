@@ -9,13 +9,16 @@
 </head>
 
 <style>
+    body {
+        font-family: arial;
+    }
+
     .blogs {
         background-color: antiquewhite;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 1px 1px 6px gray;
         margin-bottom: 20px;
-
     }
 
     .card-container {
@@ -24,10 +27,18 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
-
     }
 
-    
+    .blogs:hover {
+        transform: scale(0.9);
+        transition: 0.4s;
+    }
+
+    @media only screen and (max-width:760px) {
+        .card-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 </style>
 
 <body>
