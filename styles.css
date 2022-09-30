@@ -66,7 +66,7 @@ body {
 
   top: 50%;
   left: 50%;
-   transform: translate(-50%, -150%); 
+  transform: translate(-50%, -150%);
   height: 250px;
   width: 400px;
   background-color: #171717;
@@ -152,9 +152,16 @@ button {
 }
 
 #histories {
-  display: flex;
+
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+
+
 }
 
 .card {
@@ -173,6 +180,9 @@ button {
       rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+  text-align: center;
+  /*  */
+
 }
 
 #modal-background {
@@ -195,5 +205,25 @@ button {
 
   .card {
     flex-direction: column;
+  }
+}
+
+
+
+/*------------------------------- 
+responsiveness 
+----------------------------------*/
+
+@media only screen and (max-width:768px) {
+  #histories {
+
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}
+
+@media screen and (min-width:992px)  {
+  #histories {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
