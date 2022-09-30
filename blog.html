@@ -8,23 +8,80 @@
     <title>Document</title>
 </head>
 
+<style>
+    .blogs {
+        background-color: antiquewhite;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px gray;
+        margin-bottom: 20px;
+
+    }
+
+    .card-container {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+
+    }
+
+    .blogs:hover {
+        transform: scale(0.9);
+        transition: 0.4s;
+        ;
+    }
+
+    
+</style>
+
 <body>
 
 
 
     <!-- question and ans seciton -->
     <main>
-        <section>
-            <div>
+        <section class="card-container">
+            <div class="blogs">
                 <h2>Q-1: Difference between localStorage and sessionStorage</h2>
                 <h5>Ans:</h5>
-                <p></p>
+                <p>localStorage and sessionStorage are almost identical and have the same API. The difference is that
+                    with sessionStorage , the data is persisted only until the window or tab is closed. With
+                    localStorage , the data is persisted until the user manually clears the browser cache or until your
+                    web app clears the data.</p>
             </div>
-            <div>
+            <div class="blogs">
                 <h2>Question-2 : Difference between Global Scope and Block Scope</h2>
                 <h5>Ans:</h5>
-                <p></p>
+                <p>Global Scope: If we declare any variable globaly we can use it within the program anyware </p>
+                <p>Local Scope: If we declare any variable inside any scope such as inside a function then we can access
+                    that variable inside that function , we are not able to access it oustside of the function .</p>
             </div>
+            <div class="blogs">
+                <h2>Question-3 : How event loop work in javaScript</h2>
+                <h5>Ans:</h5>
+                <p>We know that javascript is Synchronous , But when it runs on Browser ,browser api provide
+                    asynchronous behaviour to javaScript with the help of Event Loop . </p>
+                <p>Event loop monitor the call Stack
+                    and the Callback Queue . If the Call stack is empty , the Event
+                    loop will take the first event from the queue and will push it to the call Stack , Which effectively
+                    runs it .</p>
+            </div>
+            <div class="blogs">
+                <h2>Question-4 : How can we get undefined ?</h2>
+                <h5>Ans: </h5>
+                <p>we can get undefined in many ways, examples are given below:</p>
+                <p>1. A variable or an object has an undefined value when no value is assigned before using it .</p>
+                <p>2. if we try to access a variable that doesn't exist will give us undefined</p>
+                <p>3. A function that doesn't return anything will give you undefined if you try to use it .</p>
+                <p>4.A property that doesn't exist , if you want to access it , then you will get undefined.</p>
+                <p>5.An array element that doesnt exist , if you want to access it you will get undefined.</p>
+
+            </div>
+
+
+
 
         </section>
     </main>
